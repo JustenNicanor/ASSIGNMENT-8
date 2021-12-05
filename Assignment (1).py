@@ -1,25 +1,39 @@
-import random
-print ("Give 3 numbers from 0-9")
-Samenum = 0
-ran1 = random.randint(0,9)
-ran2 = random.randint(0,9)
-ran3 = random.randint(0,9)
-Firstnum = int(input("Enter your First number: "))    
-Secondnum = int(input("Enter your Second number: "))
-Thirdnum = int(input("Enter your Third number: "))
-for i in range(1):
-    if Firstnum == ran1 or Firstnum == ran2 or Firstnum == ran3:
-        Samenum += 1
-    if Secondnum == ran1 or Secondnum == ran2 or Secondnum == ran3:
-        Samenum += 1
-    if Thirdnum == ran1 or Thirdnum == ran2 or Thirdnum or ran3:
-        Samenum +=1
-if  Samenum == 3:
+def lottery():
+    import random
+    print ("Give 3 numbers from 0-9")
+    Samenum = 0
+    ran1 = random.randint(0,9)
+    ran2 = random.randint(0,9)
+    ran3 = random.randint(0,9)
+    Firstnum = int(input("Enter your First number: "))    
+    Secondnum = int(input("Enter your Second number: "))
+    Thirdnum = int(input("Enter your Third number: "))
+    for i in range(1):
+        if Firstnum == ran1 or Firstnum == ran2 or Firstnum == ran3:
+            Samenum += 1
+        if Secondnum == ran1 or Secondnum == ran2 or Secondnum == ran3:
+            Samenum += 1
+        if Thirdnum == ran1 or Thirdnum == ran2 or Thirdnum or ran3:
+            Samenum +=1
+    if  Samenum == 3:
         print("You WIN!")
-else:
+    else:
         print("You LOSE!")
+def Tryagain():
+    print("Type 'y' for YES if you want to play again, Type 'n' for NO.")
+    Pagain = input("Do you want to play agian? ")
+    if Pagain == "y":
+        lottery()
+    elif Pagain == "n":
+        print("Thankyou for playing!")
+    else:
+        Tryagain()
 
 
+
+
+lotto = lottery()
+Playagain = Tryagain()
 
 
 
