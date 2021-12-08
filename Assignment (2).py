@@ -1,12 +1,17 @@
-def guesser():
+def guessthenumber ():
     import random
-    randomizer1 = random.randint(0,100)
+    randomizer1 = random.randint(0,100) 
+    return randomizer1
+def guesser(gtnF):
     Guesser = int(input("Guess the number: "))
-    if randomizer1 < Guesser:
+    if gtnF < Guesser:
         print("GREATER THAN")
-        guesser()
-    elif randomizer1 > Guesser:
+        guesser(gtn)
+    elif gtnF > Guesser:
         print("LESS THAN")
+        guesser(gtn)
     else:
         print ("CORRECT!")
-guesser()
+
+gtn = guessthenumber()
+user = guesser(gtn)
